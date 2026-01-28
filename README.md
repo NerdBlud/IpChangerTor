@@ -48,8 +48,8 @@ This Python script allows you to **automatically change your external IP address
 ### **1. Clone the Repository**
 
 ```bash
-git clone https://github.com/nerdblud/ip-changer-tor.git
-cd ip-changer-tor
+git clone https://github.com/nerdblud/IpChangerTor.git
+cd IpChangerTor
 ```
 
 ### **2. Run the Script**
