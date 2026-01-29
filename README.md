@@ -1,74 +1,71 @@
+# IP Changer using Tor
+
+This Python script automatically changes your external IP address at regular intervals using the Tor network. It routes traffic through Tor nodes to provide basic IP rotation and network anonymity.
 
 ---
 
-# 🕵️ IP Changer using Tor
-
-This Python script allows you to **automatically change your external IP address at regular intervals using Tor**. It uses the Tor network to route your traffic through different nodes, ensuring anonymity.
-
----
-
-## ✅ Features
+## Features
 
 * Automatically installs required packages:
 
-  * **python3-pip**
-  * **tor**
-  * **requests**
-  * **torsocks**
-* Starts the Tor service and changes IP at a given time interval.
-* Fetches your **current external IP** after each change.
-* Works on **Linux systems with apt package manager**.
-* **Customizable options**:
+  * python3-pip
+  * tor
+  * requests
+  * torsocks
+* Starts the Tor service and changes IP at a specified interval
+* Retrieves and displays the current external IP after each change
+* Designed for Linux systems using the apt package manager
+* Customizable options:
 
-  * Interval time between IP changes.
-  * Number of times to change IP (or infinite).
-
----
-
-## 📌 Requirements
-
-* **Python 3**
-* **Linux system with `apt` package manager**
-* **Root access (sudo privileges)**
+  * Time interval between IP changes
+  * Number of IP changes or continuous mode
 
 ---
 
-## 🔍 How It Works
+## Requirements
 
-1. Installs all necessary packages if not installed.
-2. Starts the **Tor service**.
-3. Uses **SOCKS5 proxy (127.0.0.1:9050)** to fetch the external IP.
-4. Changes IP by reloading the **Tor service**.
-5. Repeats this process based on user input.
+* Python 3
+* Linux system with apt package manager
+* Root access (sudo privileges)
 
 ---
 
-## ▶️ Usage
+## How It Works
 
-### **1. Clone the Repository**
+1. Installs required dependencies if they are not already installed
+2. Starts the Tor service
+3. Uses a SOCKS5 proxy (127.0.0.1:9050) to fetch the external IP
+4. Reloads the Tor service to obtain a new exit node and IP address
+5. Repeats the process based on user-defined settings
+
+---
+
+## Usage
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/nerdblud/IpChangerTor.git
 cd IpChangerTor
 ```
 
-### **2. Run the Script**
+### 2. Run the Script
 
 ```bash
 python3 ip_changer.py
 ```
 
-### **3. Provide Inputs**
+### 3. Provide Inputs
 
-* **Time interval in seconds** (default: 60)
-* **Number of times to change IP**
+* Time interval in seconds (default: 60)
+* Number of times to change IP
 
   * Default: 1000
-  * Enter `0` for infinite loop.
+  * Enter 0 for continuous execution
 
 ---
 
-## 🖼️ Example
+## Example Output
 
 ```
                     _ _     _           _   
@@ -84,17 +81,17 @@ python3 ip_changer.py
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
-This tool is intended for **educational and privacy purposes only**.
-Do **NOT** use it for any illegal activities. You are responsible for how you use this script.
+This tool is intended for educational and privacy-related purposes only.
+Do not use this software for illegal activities. You are responsible for complying with all applicable laws and policies.
 
 ---
 
-## 🔐 Important Notes
+## Important Notes
 
-* You need **Tor installed and running**.
-* Script uses **sudo commands**, so you may need to enter your password.
-* Changing IP frequently might cause **Tor nodes to block you** temporarily.
+* Tor must be installed and running on the system
+* The script uses sudo commands and may require password entry
+* Changing IP addresses frequently may result in temporary restrictions from some Tor exit nodes
 
 ---
